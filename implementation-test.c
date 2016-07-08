@@ -11,12 +11,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<check.h>
-char ostring1[] = "IV";
-char ostring2[] = "V";
+#define MAX 4096
+char ostring1[MAX] = "IV";
+char ostring2[MAX] = "V";
 
 START_TEST(romancaltest)
 {
-#line 10
+#line 11
 	ck_assert_str_eq(add(ostring1,ostring2), "IX");
 	
 
