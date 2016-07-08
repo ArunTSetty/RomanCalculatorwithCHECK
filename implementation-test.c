@@ -12,13 +12,13 @@
 #include<stdlib.h>
 #include<check.h>
 #define MAX 4096
-char ostring1[MAX] = "X";
-char ostring2[MAX] = "VI";
+char ostring1[MAX] = "C";
+char ostring2[MAX] = "L";
 
 START_TEST(romancaltest)
 {
 #line 11
-	ck_assert_str_eq(subtract(ostring1,ostring2), "IV");
+	ck_assert_str_eq(subtract(ostring1,ostring2), "L");
 	
 
 	
