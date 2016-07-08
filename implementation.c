@@ -110,8 +110,14 @@ char* ReplaceSubtractives(char* subfrom[],char* subwith[],char* originalstring) 
  }
 
 char* subtract(char* ostring1, char* ostring2) {	
-	ReplaceSubtractives(groupfrom,groupwith,ostring1);	
-	Cancel(ostring1,ostring2);//Cancel out the common I's       
-	ReplaceSubtractives(subfrom,subwith,ostring1); //Replace Reverse Subtractives (IIII-->IV)
-	return ostring1;
+	
+    ReplaceSubtractives(subwith,subfrom,ostring1);//Replace Subtractives for the first Roman numeral (IV-->IIII) 
+    ReplaceSubtractives(subwith,subfrom,ostring2);//Replace Subtractives for the second Roman numeral 
+    ReplaceSubtractives(groupfrom,groupwith,ostring1); //Expand the first Roman Numeral such that it is expressed only in 'I'
+    ReplaceSubtractives(groupfrom,groupwith,ostring2); //Expand the Second Roman Numeral such that it is expressed only in 'I'
+    Cancel(ostring1,ostring2);//Cancel out the common I's
+    Group(groupwith,groupfrom,ostring1); //Group and Compress (IIIII-->V, VV-->X, XXXXX-->L etc.
+    ReplaceSubtractives(subfrom,subwith,ostring1); //Replace Reverse Subtractives
+    return ostring1;
+
 }
