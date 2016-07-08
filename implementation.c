@@ -110,6 +110,8 @@ char* ReplaceSubtractives(char* subfrom[],char* subwith[],char* originalstring) 
  }
 
 char* subtract(char* ostring1, char* ostring2) {	
+	ReplaceSubtractives(groupfrom,groupwith,ostring1);	
 	Cancel(ostring1,ostring2);//Cancel out the common I's       
+	ReplaceSubtractives(subfrom,subwith,ostring1); //Replace Reverse Subtractives (IIII-->IV)
 	return ostring1;
 }
