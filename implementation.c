@@ -93,3 +93,7 @@ char* ReplaceSubtractives(char* subfrom[],char* subwith[],char* originalstring) 
     ReplaceSubtractives(subfrom,subwith,ostring1); //Replace Reverse Subtractives (VIIII-->IX)
     return ostring1;
  }
+
+char* subtract(char* ostring1, char* ostring2) {	
+       return ostring1;
+}
