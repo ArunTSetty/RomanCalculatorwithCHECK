@@ -12,12 +12,12 @@
 #include<stdlib.h>
 #include<check.h>
 char ostring1[] = "I";
-char ostring2[] = "I";
+char ostring2[] = "II";
 
 START_TEST(romancaltest)
 {
 #line 10
-	ck_assert_str_eq(add(ostring2,ostring1), "II");
+	ck_assert_str_eq(add(ostring2,ostring1), "III");
 	
 
 	
