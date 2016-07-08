@@ -3,6 +3,7 @@
  #include <string.h>
  #define MAX 4096
 #define ROMANORDER 7
+#define SUBORDER 5
 char* subfrom[]= {"IV","IX","XL","XC","CD","CM"};
 char* subwith[]={"IIII","VIIII","XXXX","LXXXX","CCCC","DCCCC"};
 char* groupfrom[]= {"IIIII","VV","XXXXX","LL","CCCCC","DD"};
@@ -11,7 +12,7 @@ char* groupwith[]={"V","X","L","C","D","M"};
 char* Group(char* groupfrom[],char* groupwith[],char* originalstring) //To group IIIII->V, VV-->X, XXXXX->L etc.
 {
     int j;    
-    for (j=0;j<6;j++){
+    for (j=0;j<=SUBORDER;j++){
     Replace(originalstring, groupwith[j], groupfrom[j]);
     }
     return originalstring;
@@ -53,7 +54,7 @@ char* Sort(char* originalstring)
 char* ReplaceSubtractives(char* subfrom[],char* subwith[],char* originalstring) //To replace Subtractives (IV-->IIII and vice versa)
 {
     int j;    
-    for (j=5;j>-1;j--){
+    for (j=SUBORDER;j>-1;j--){
     Replace(originalstring, subwith[j], subfrom[j]);
     }
     return originalstring;
