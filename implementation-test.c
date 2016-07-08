@@ -12,8 +12,8 @@
 #include<stdlib.h>
 #include<check.h>
 #define MAX 4096
-char ostring1[MAX] = "VI";
-char ostring2[MAX] = "II";
+char ostring1[MAX] = "X";
+char ostring2[MAX] = "VI";
 
 START_TEST(romancaltest)
 {
