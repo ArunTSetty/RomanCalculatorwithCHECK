@@ -17,7 +17,7 @@ char ostring2[] = "V";
 START_TEST(romancaltest)
 {
 #line 10
-	ck_assert_str_eq(add(ostring2,ostring1), "IX");
+	ck_assert_str_eq(add(ostring1,ostring2), "IX");
 	
 
 	
