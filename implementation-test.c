@@ -11,13 +11,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<check.h>
-char ostring1[] = "I";
-char ostring2[] = "III";
+char ostring1[] = "IV";
+char ostring2[] = "V";
 
 START_TEST(romancaltest)
 {
 #line 10
-	ck_assert_str_eq(add(ostring2,ostring1), "IV");
+	ck_assert_str_eq(add(ostring2,ostring1), "IX");
 	
 
 	
